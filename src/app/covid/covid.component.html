@@ -1,0 +1,45 @@
+<div class="category">
+  <p>
+    Click on the following states to know the covid daily status in each state!
+  </p>
+
+  <select (change)="getData()" class="dropdown">
+    <option *ngFor="let item of states | keyvalue" value="{{ item.value }}">
+      {{ item.key }}
+    </option>
+  </select>
+
+  <div class="btn_contain">
+    <button class="btn_item">
+      <div class="item_value">{{ dateChecked }}</div>
+      <div class="item_name">DATECHECKED</div>
+    </button>
+    <div *ngFor="let item of resultOfObject | keyvalue">
+      <div *ngIf="item">
+        <button class="btn_item">
+          <div class="item_value">{{ item.value | number }}</div>
+          <div class="item_name">{{ item.key | uppercase }}</div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th *ngFor="let tableheader of tableHeaders">{{ tableheader }}</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>{{ dateChecked }}</td>
+        <td *ngFor="let item of resultOfObject | keyvalue">
+          <div *ngIf="item">
+            {{ item.value | number }}
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

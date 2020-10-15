@@ -1,0 +1,35 @@
+<div class="home_container">
+<p>Welcome To The Covid Status Tracker !!</p>
+<p>Here You can find the daily covid cases in all the states of the USA.</p>
+
+
+<ul class="total_contain">
+    <div class="contain1">
+    <h2>Globally </h2>
+      <div *ngIf="worldData" class="listitem">
+        <button> Total Cases : {{ worldData.cases | number }}</button>
+        <button> Total Deaths : {{ worldData.deaths | number }}</button>
+        <button>Recovered : {{ worldData.recovered | number }}</button>
+        <button> Today's Positive Cases: {{ worldData.todayCases | number }}</button>
+        <button> Today's Death: {{ worldData.todayDeaths | number }}</button>
+
+        
+    </div>  
+</div>
+<div class="contain1">  
+    <h2>USA</h2>
+      <div *ngIf="usData" class="listitem">
+        <button>Total Cases : {{ usData.cases | number }}</button>   
+        <button>Total Deaths : {{ usData.deaths | number }}</button>
+        <button>Recovered : {{ usData.recovered | number }}</button>
+        <button>Today's Positive Cases: {{ usData.todayCases | number }}</button>
+        <button>Today's Death: {{ usData.todayDeaths | number }}</button>
+    </div> 
+</div>
+
+</ul>
+</div>
+
+
+
+

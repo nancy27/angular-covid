@@ -1,0 +1,18 @@
+.container{
+    background-color: black;
+    min-height:2000px;
+    height:100%;
+    color:white;
+}
+.main {
+    margin-left: 150px; /* Same as the width of the sidebar */
+    padding: 0px 12px;  
+    justify-content: center;
+    width:100%;
+    min-width: 600px;
+  }
+  img{
+     left: 0;
+     padding: 0;
+    
+  }
